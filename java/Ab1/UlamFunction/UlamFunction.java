@@ -7,9 +7,9 @@ class UlamFunction {
 //
 //        System.out.println(Integer.MAX_VALUE);
         //for (int j = 1; j < 10; j++) {
-            for (int i = 1; i < 100000; i++) {
+            for (int i = 1; i < 1000000; i++) {
                 //results.add(Worker.ulamFunction(i));
-                int n = i/* *j */;
+                long n = i/* *j */;
                 while (n != 1) {
                     if (n % 2 == 0) {
                         n /= 2;
