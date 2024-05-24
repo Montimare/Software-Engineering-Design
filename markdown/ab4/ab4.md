@@ -34,6 +34,8 @@ skinparam classAttributeIconSize 0
 ```
 
 # Aufgabe 1
+um website zu bekommen "curl"
+
 # Aufgabe 2
 Afferent (incoming) coupling (AC): number of classes outside a module that depend on classes within that module
 

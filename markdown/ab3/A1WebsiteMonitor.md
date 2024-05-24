@@ -58,6 +58,7 @@ class WebsiteMonitor{
     -users : List<User>
     ENTWEDER ODER
     -subs : List<Subscription>
+    +run()
 }
 class Subscription
 class User
