@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URI;
+import java.net.URL;
 
 public class Website {
     private String websiteAdress;
@@ -38,5 +39,8 @@ public class Website {
     }
     public void setWebsiteAdress(String websiteAdress) {
         this.websiteAdress = websiteAdress;
+    }
+    public void setFetchedContent(String fetchedContent) {
+        this.fetchedContent = fetchedContent;
     }
 }

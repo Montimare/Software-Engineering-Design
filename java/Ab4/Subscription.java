@@ -70,7 +70,7 @@ public class Subscription {
         if (website.getWebsiteAddress().equals(fetchedSite)){
             return false;
         } else {
-            website.setWebsiteAdress(fetchedSite);
+            website.setFetchedContent(fetchedSite);
             return true;
         }
     }
