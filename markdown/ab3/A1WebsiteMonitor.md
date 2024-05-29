@@ -66,7 +66,7 @@ class Notification
 class WebsiteHistory
 class Website
 
-WebsiteMonitor -- User
+Subscription -- User
 WebsiteMonitor -right- Subscription
 Subscription -right- Notification
 Subscription -- WebsiteHistory
