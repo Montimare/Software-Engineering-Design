@@ -68,12 +68,6 @@ public class WebsiteMonitor {
                     break;
                 case "3":
                     for (Subscription sub : subscriptions) {
-
-                        sub.notifyAllUsers();
-                    }
-                    break;
-                case "4":
-                    for (Subscription sub : subscriptions) {
                         if(sub.checkForUpdate()){
                             sub.notifyAllUsers();
                         }
