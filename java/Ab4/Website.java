@@ -2,9 +2,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URI;
-import java.net.URL;
 
-public class Website {
+public class Website extends Subject{
     private String websiteAdress;
     private String fetchedContent;
 
@@ -12,7 +11,7 @@ public class Website {
         this.websiteAdress = url;
     }
 
-    public String fetchWebsite() {
+    public void fetchWebsite() {
         try {
             StringBuilder result = new StringBuilder();
             URI uri = new URI(websiteAdress);
@@ -24,10 +23,12 @@ public class Website {
                     result.append(line);
                 }
             }
-            return result.toString();
+            if (!result.toString().equals(fetchedContent)){
+                notifyObservers();
+                setFetchedContent(result.toString());
+            }
         } catch (Exception e) {
             e.printStackTrace();
-            return "Error";
         }
     }
 

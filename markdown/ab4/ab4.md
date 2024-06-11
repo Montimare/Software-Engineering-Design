@@ -34,7 +34,77 @@ skinparam classAttributeIconSize 0
 ```
 
 # Aufgabe 1
-um website zu bekommen "curl"
+
+```mermaid
+classDiagram
+direction BT
+class INotification {
+<<Interface>>
+  + notifyTelegram(String) void
+  + notifyDiscord(String) void
+  + notifyMail(String) void
+  + notifyWhatsApp(String) void
+  + notifySms(String) void
+}
+class NotificationPreference {
+  - Boolean mail
+  - Boolean sms
+  - Boolean whatsApp
+  - Boolean telegram
+  - Boolean discord
+  + getDiscord() Boolean
+  + getTelegram() Boolean
+  + getWhatsApp() Boolean
+  + toString() String
+  + getSms() Boolean
+  + getMail() Boolean
+  - parseNotification(String) void
+  + addNotification(List~String~) void
+}
+class NotificationPrinter {
+  + notifyDiscord(String) void
+  + notifySms(String) void
+  + notifyWhatsApp(String) void
+  + notifyMail(String) void
+  + notifyTelegram(String) void
+}
+class Subscription {
+  - List~User~ users
+  - Website website
+  - checkForDuplicateUserAndAddUser(String, List~String~) void
+  + addUser(String, List~String~) void
+  + notifyAllUsers() void
+  + checkForUpdate() boolean
+  + toString() String
+  + getWebsiteAdress() String
+}
+class User {
+  - NotificationPreference notificationPreference
+  - String name
+  + getUserName() String
+  + getNotificationPreference() NotificationPreference
+  + toString() String
+}
+class Website {
+  - String fetchedContent
+  - String websiteAdress
+  + getWebsiteAddress() String
+  + fetchWebsite() String
+  + getContent() String
+  + setWebsiteAdress(String) void
+  + setFetchedContent(String) void
+}
+class WebsiteMonitor {
+  + main(String[]) void
+}
+
+NotificationPrinter  ..>  INotification 
+Subscription "1" *--> "users *" User
+Subscription "1" *--> "website 1" Website 
+User "1" *--> "notificationPreference 1" NotificationPreference 
+WebsiteMonitor *--> Subscription
+Subscription --> INotification
+```
 
 # Aufgabe 2
 Afferent (incoming) coupling (AC): number of classes outside a module that depend on classes within that module
@@ -61,6 +131,9 @@ Instability = 1
 
 Package für Website<br>
 Instability = 0
+
+# Aufgabe 4
+commit to github lol
 
 # Aufgabe 5
 

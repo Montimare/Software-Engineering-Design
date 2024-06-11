@@ -1,11 +1,11 @@
 import java.util.List;
 
 public class NotificationPreference {
-    private Boolean mail;
-    private Boolean sms;
-    private Boolean whatsApp;
-    private Boolean telegram;
-    private Boolean discord;
+    private boolean mail;
+    private boolean sms;
+    private boolean whatsApp;
+    private boolean telegram;
+    private boolean discord;
 
     public NotificationPreference(){
         this.mail = false;
@@ -41,23 +41,23 @@ public class NotificationPreference {
         }
     }
 
-    public Boolean getMail() {
+    public boolean getMail() {
         return mail;
     }
 
-    public Boolean getSms() {
+    public boolean getSms() {
         return sms;
     }
 
-    public Boolean getWhatsApp() {
+    public boolean getWhatsApp() {
         return whatsApp;
     }
 
-    public Boolean getTelegram() {
+    public boolean getTelegram() {
         return telegram;
     }
 
-    public Boolean getDiscord() {
+    public boolean getDiscord() {
         return discord;
     }
 
