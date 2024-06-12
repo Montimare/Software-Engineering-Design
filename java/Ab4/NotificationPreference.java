@@ -1,3 +1,4 @@
+/*
 import java.util.List;
 
 public class NotificationPreference {
@@ -81,4 +82,4 @@ public class NotificationPreference {
         }
         return sb.toString();
     }
-}
+}*/

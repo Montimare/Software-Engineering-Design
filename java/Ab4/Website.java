@@ -1,3 +1,7 @@
+import WebsiteComparison.ContentSizeWebsiteComparison;
+import WebsiteComparison.ContextWebsiteComparison;
+import WebsiteComparison.TextContentWebsiteComparison;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -5,7 +9,8 @@ import java.net.URI;
 
 public class Website extends Subject{
     private String websiteAdress;
-    private String fetchedContent;
+    private String fetchedContent = "";
+    ContextWebsiteComparison contextWebsiteComparison = new ContextWebsiteComparison();
 
     public Website(String url) {
         this.websiteAdress = url;
@@ -23,7 +28,14 @@ public class Website extends Subject{
                     result.append(line);
                 }
             }
-            if (!result.toString().equals(fetchedContent)){
+//            deprecated because of strategy pattern of comparison
+//            if (!result.toString().equals(fetchedContent)){
+//                notifyObservers();
+//                setFetchedContent(result.toString());
+//            }
+//            contextWebsiteComparison.setWebsiteComparison(new ContentSizeWebsiteComparison());
+            contextWebsiteComparison.setWebsiteComparison(new TextContentWebsiteComparison());
+            if (!contextWebsiteComparison.performCompare(result.toString(), fetchedContent)){
                 notifyObservers();
                 setFetchedContent(result.toString());
             }
