@@ -1,7 +1,6 @@
 package WebsiteComparison;
 
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 
 public class TextContentWebsiteComparison implements IWebsiteComparison{
     @Override
