@@ -44,4 +44,16 @@ public class Website extends Subject{
     public void setFetchedContent(String fetchedContent) {
         this.fetchedContent = fetchedContent;
     }
+
+    @Override
+    public String toString() {
+//        StringBuilder sb = new StringBuilder();
+//        sb.append(websiteAdress);
+//        sb.append("\n");
+//        sb.append("Users:\n");
+//        for(User user : users){
+//            sb.append(user.toString() + ", ");
+//        }
+        return(websiteAdress);
+    }
 }
