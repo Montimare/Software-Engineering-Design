@@ -48,7 +48,7 @@ class SmsNotification {
   + notify(String): void
   + toString(): String
 }
-class Subject {
+abstract Subject <<abstract>>{
   + Subject(): 
   ~ observers: List<Observer>
   + attach(Observer): void
@@ -95,19 +95,30 @@ class WhatsAppNotification {
 
 WebsiteMonitor -- User
 WebsiteMonitor -- Website
-ContentSizeWebsiteComparison  -[#008200,dashed]-^  IWebsiteComparison           
-ContextWebsiteComparison     "1" *-[#595959,plain]-> "websiteComparison\n1" IWebsiteComparison           
-DiscordNotification           -[#008200,dashed]-^  INotification                
-HtmlContentWebsiteComparison  -[#008200,dashed]-^  IWebsiteComparison           
-MailNotification              -[#008200,dashed]-^  INotification                
-SmsNotification               -[#008200,dashed]-^  INotification                
+ContentSizeWebsiteComparison  -[#008200,dashed]up-^  IWebsiteComparison           
+ContextWebsiteComparison     "1" *-[#595959,plain]down----> "websiteComparison\n1" IWebsiteComparison           
+DiscordNotification           -[#008200,dashed]up-^  INotification                
+HtmlContentWebsiteComparison  -[#008200,dashed]up-^  IWebsiteComparison           
+MailNotification              -[#008200,dashed]up-^  INotification                
+SmsNotification               -[#008200,dashed]up-^  INotification                
 Subject                      "1" *-[#595959,plain]-> "observers\n*" Observer                     
-TelegramNotification          -[#008200,dashed]-^  INotification                
-TextContentWebsiteComparison  -[#008200,dashed]-^  IWebsiteComparison           
-User                         "1" *-[#595959,plain]-> "notificationPreference\n*" INotification                
+TelegramNotification          -[#008200,dashed]up-^  INotification                
+TextContentWebsiteComparison  -[#008200,dashed]up-^  IWebsiteComparison           
+User                         "1" *-[#595959,plain]down--> "notificationPreference\n*" INotification                
 User                          -[#008200,dashed]-^  Observer                     
 Website                      "1" *-[#595959,plain]-> "contextWebsiteComparison\n1" ContextWebsiteComparison     
 Website                       -[#000082,plain]-^  Subject                      
-WhatsAppNotification          -[#008200,dashed]-^  INotification                
+WhatsAppNotification          -[#008200,dashed]up-^  INotification          
+
+
+INotification -[hidden]-- IWebsiteComparison
+
 @enduml
 ```
+das war relativ auwendig das puml zu formatieren :(
+
+# Aufgabe 3
+????
+
+# Aufgabe 4
+commit to github lol
