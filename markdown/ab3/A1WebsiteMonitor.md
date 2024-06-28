@@ -1,4 +1,5 @@
 # Aufgabe 1
+
 ## website monitor
 
 ```mermaid
@@ -16,6 +17,7 @@ classDiagram
     
     }
 ```
+
 ```plantuml
 @startuml
 skinparam classAttributeIconSize 0
@@ -50,7 +52,9 @@ skinparam classAttributeIconSize 0
     System -- Website
 @enduml
 ```
+
 ### Locaizyc
+
 ```plantuml
 @startuml
 skinparam classAttributeIconSize 0
@@ -73,7 +77,6 @@ Subscription -- WebsiteHistory
 WebsiteHistory -- Website
 @enduml
 ```
-
 
 # KLAUSURRELEVANT
 

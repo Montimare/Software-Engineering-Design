@@ -17,7 +17,7 @@ public class WebsiteMonitor {
                             "2: List subscriptions\n" +
                             "3: Check for updates\n" +
                             "0: Quit\n"
-            );
+            );  
             String input = scan.nextLine();
             switch (input) {
                 default:

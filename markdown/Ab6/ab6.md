@@ -117,8 +117,17 @@ INotification -[hidden]-- IWebsiteComparison
 ```
 das war relativ auwendig das puml zu formatieren :(
 
-# Aufgabe 3
-????
+# Aufgabe 3: Coding Conventions we used
+a|b
+--|--
+- Naming conventions |
+- Comments | 
+- Indentation style | 4 spaces
+- Brackets | 
+
+## enable
+- clean code
+- maintainability
 
 # Aufgabe 4
 commit to github lol
