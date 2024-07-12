@@ -52,7 +52,7 @@ In der Klausur muss man einen exponentiellen Graphen zeichnen.
 2. Different content size
 3. Equal HTML
 4. Different HTML
-5. Equal text       
+5. Equal text
 6. Different text
 
 # Aufgabe 4
